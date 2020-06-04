@@ -9,7 +9,6 @@ module Hcaptcha
     end
 
     def verify_url=(value)
-      binding.pry
       @verify_url = URI(value)
     end
   end
