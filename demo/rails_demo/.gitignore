@@ -1,0 +1,14 @@
+*.sql
+*.bak
+/log/*
+!/log/.keep
+/tmp
+.byebug_history
+*.DS_Store
+
+/node_modules
+
+config/manifest.json
+public/assets/*
+
+/config/master.key

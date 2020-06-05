@@ -1,0 +1,8 @@
+<%= form_with(url: verify_demo_path, method: :post, local: true) do |form| %>
+  <%= label_tag(:name, "What's your name ? ") %>
+  <%= text_field_tag(:q) %>
+
+  <%= hcaptcha_tag(size: 'invisible') %>
+
+  <%= submit_tag('Do something magic!') %>
+<% end %>

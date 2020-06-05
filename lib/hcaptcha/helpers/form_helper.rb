@@ -9,6 +9,7 @@ module Hcaptcha
         if options[:size] == 'invisible'
           tags << raw(hcaptcha_script(options[:input_id] || 'captcha-1'))
         end
+
         raw tags
       end
 
@@ -16,7 +17,7 @@ module Hcaptcha
 
       def hcaptcha_script(widget_id)
         raw <<~HTML
-          <script type="text/javascript" async defer>
+          <script type="text/javascript">
             let captcha_generated = false
             const current_form = document.getElementById('#{widget_id}').closest('form')
 
@@ -44,8 +45,8 @@ module Hcaptcha
           theme: options[:theme] || 'normal'
         }
 
-        if options['size'] == 'invisible'
-          data.merge(callback: options[:callback] || 'captchaValidated')
+        if options[:size] == 'invisible'
+          data.merge!(callback: options[:callback] || 'captchaValidated')
         end
 
         data
