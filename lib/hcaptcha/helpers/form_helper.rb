@@ -3,20 +3,36 @@ module Hcaptcha
     module FormHelper
       def hcaptcha_tag(**options)
         tags = ''
-        tags <<  content_tag('div', '', id: 'captcha-1', class: 'h-captcha', data: hcaptcha_data_attributes(options))
-        tags << javascript_include_tag('https://hcaptcha.com/1/api.js', async: true, defer: true)
+        tags << hcaptcha_input(options)
+        tags << hcaptcha_script
 
-        if options[:size] == 'invisible'
-          tags << raw(hcaptcha_script(options[:input_id] || 'captcha-1'))
+        if options[:size] == 'invisible' && !options[:no_callback_script]
+          tags << hcaptcha_invisible_script(options[:input_id] || 'captcha-1')
         end
 
-        raw tags
+        tags
       end
 
       private
 
-      def hcaptcha_script(widget_id)
-        raw <<~HTML
+      def hcaptcha_input(**options)
+        <<~HTML
+          <div
+            id="captcha-1"
+            class="h-captcha"
+            #{formatted_data_attributes(options)}
+          ></div>
+        HTML
+      end
+
+      def hcaptcha_script
+        <<~HTML
+          <script src="https://hcaptcha.com/1/api.js" async defer></script>
+        HTML
+      end
+
+      def hcaptcha_invisible_script(widget_id)
+        <<~HTML
           <script type="text/javascript">
             let captcha_generated = false
             const current_form = document.getElementById('#{widget_id}').closest('form')
@@ -40,7 +56,7 @@ module Hcaptcha
 
       def hcaptcha_data_attributes(**options)
         data = {
-          sitekey: Hcaptcha.configuration.site_key,
+          sitekey: options[:sitekey] || Hcaptcha.configuration.site_key,
           size: options[:size] || 'normal',
           theme: options[:theme] || 'normal'
         }
@@ -50,6 +66,11 @@ module Hcaptcha
         end
 
         data
+      end
+
+      def formatted_data_attributes(**options)
+        hcaptcha_data_attributes(options).map { |key, value| "data-#{key}='#{value}'" }
+                                         .join(' ')
       end
     end
   end
