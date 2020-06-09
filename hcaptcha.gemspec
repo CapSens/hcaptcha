@@ -6,17 +6,17 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Quentin Degraeve"]
   spec.email         = ["quentin@capsens.com"]
 
-  spec.summary       = %q{simple integration of hcaptcha into rails}
-  spec.description   = %q{simple integration of hcaptcha into rails}
-  spec.homepage      = "https://github.com/Capsens"
+  spec.summary       = %q{Hcaptcha helper for ruby and RoR}
+  spec.description   = %q{Helpers to ease the use of Hcaptcha into Ruby or Ruby on Rails projects}
+  spec.homepage      = "https://github.com/Capsens/hcaptcha"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  # spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
