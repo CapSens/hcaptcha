@@ -2532,3 +2532,139 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 10ms (Views: 10.3ms | Allocations: 3610)
 
 
+Started GET "/" for ::1 at 2020-06-08 09:56:33 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 508)
+Completed 500 Internal Server Error in 35ms (Allocations: 12857)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2020-06-08 09:58:01 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 508)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/quentin/Capsens/hcaptcha/demo/rails_demo/public/packs
+[Webpacker] Hash: 771e0b4f89e231c80f02
+Version: webpack 4.43.0
+Time: 1295ms
+Built at: 06/08/2020 9:58:05 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-5adef5b690299abe96d4.js   34.8 KiB  application  [emitted] [immutable]  application
+js/application-5adef5b690299abe96d4.js.map   38.3 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-5adef5b690299abe96d4.js js/application-5adef5b690299abe96d4.js.map
+[./app/javascript/packs/application.js] 653 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 1 hidden module
+
+Completed 200 OK in 3871ms (Views: 3867.8ms | Allocations: 9320)
+
+
+Started GET "/" for 82.125.66.89 at 2020-06-08 09:58:14 +0200
+Cannot render console from 82.125.66.89! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3ms (Views: 2.6ms | Allocations: 2044)
+
+
+Started GET "/" for 92.184.108.197 at 2020-06-08 09:58:22 +0200
+Cannot render console from 92.184.108.197! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 65)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 4.0ms | Allocations: 2037)
+
+
+Started GET "/hcaptcha" for 92.184.108.197 at 2020-06-08 09:58:31 +0200
+Cannot render console from 92.184.108.197! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HcaptchaController#hcaptcha as HTML
+  Rendering hcaptcha/hcaptcha.html.erb within layouts/application
+  Rendered hcaptcha/hcaptcha.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.0ms | Allocations: 3423)
+
+
+Started GET "/hcaptcha" for 82.125.66.89 at 2020-06-08 09:58:47 +0200
+Cannot render console from 82.125.66.89! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HcaptchaController#hcaptcha as HTML
+  Rendering hcaptcha/hcaptcha.html.erb within layouts/application
+  Rendered hcaptcha/hcaptcha.html.erb within layouts/application (Duration: 1.8ms | Allocations: 917)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 2804)
+
+
+Started POST "/verify_demo" for 92.184.108.197 at 2020-06-08 09:58:53 +0200
+Cannot render console from 92.184.108.197! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HcaptchaController#verify_demo as HTML
+  Parameters: {"authenticity_token"=>"2DzQd5J+sZgTQlnhR45nOuZ4DTSxRQFCoOGhHzHhG5SYqlBGQQ9URwMtYRcaKpxsqlRcDB5XQMEyOkm0FmqVOg==", "name"=>"Ismael", "g-recaptcha-response"=>"P0_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNza2V5IjoiZkhJaXVleWRjcXo5clhWRm83eXJqa3FUdmZ5d05WaU1lRlVqdk1DcTNteG5yNEVmdVdlYzVCaS9jR0ppOU1oV1dpWHdmOUtaOGV6ZDZZQnhad3h3RTA1ajQ4dHlBdllma3J1cUJLVjdhWHlMeUgxS3kyWWpWTmUwc2RmSkd2OWo1cjR3TjJkS01TYkJZZHgwOW5wb2lTSnloT2VhL08xRTE4c1EySVF6L2ZJdlFWWVRtbVN1S1FkaXQwZGZYZndCY2FKeElIMWhSY01hS0d2dk9uNmNuSUFkak02dnl4L1lVWmE2c0F6STU2UUc3dWVBOWhVeDVBR3BPZkoydlhreW81WU9relhzbkNoMDFOVWNHSnp6RkZ6ckxxZWFFQTFCVGxVRkk5UTdEWXdUV2N6YU5oenRnZjVkdEFPSk95UmxlcjUrNDVING03bEY0eUlxU0FYZDdvdzJaRGNwZFNkS3BncWN1TDJsb0dtejJCRFRPOWFlZzdSbno1V1hhNU0rK1phQ2VlTG9XYUpCekhRS1BsRUFlZUxoZVpUYkZNaUJKWkVIak9FT3RvWW5wU0xqTWFQWmtvN3QrUEhRRTlzR1lWcVMrek1kN0EzTHIxam1tb1JRVXI1SVpXeldBQ3E5QllxdXNCUFVsQkJja2JtK3NzL3JUbmxCanUwN1FxbGk1LzkvK3BrbktHL2h1OHFzanpZdjJ4RThCQWFZNnIwcG5sRHNHd1VQYkgwbzRkUGVqNHRlem1QZXZobmY1NGxyQUJ4M2Q2OC9jeHJnbEF0QWo0TjFFVUZDVXMvY1VnRmRpa0hPZVBGcmtsQ3VvR3Yvekd3cWx5UjB3ZVNjNWV3REJ0R29ucTZxMm1EYWp0djBicDZTUENiQkZwakNlMWdpVmlFaXVhME1DSC9DVjZiVUF6WitXNmplUWUrVlBMUXJuYW1MVTIxaklhSkFpL2hBM1hQaC9sUGp0ekQrY1VCVDRWUmNrYnc1ZjE2SytwZjFDOGhDckorSjBJV1I0TmRXVVVTekRsNlRsVXpzQmZuUzJrSHVNTzJBQ1BjU05YazhMOUJHQUF4MXc0R2VzTVRxVGNXWGNDM2NCZVQrdGdLVUFUNmRDV3NIb0txeldSR1lXL2VhSTBCTVNBMEZSYlZFR2NrQTdYUGd2NHVac1Y3K3FlVlF4QXNITUJYWkJjd0pMb3UxTEluSnExZlh6S1NZRjlIbWxSUDBZT0JPc3pGUVRaL2pBM2FuT1orREdXc1pIcER0blg2MmZGOUovSW9oQ2xDZDEweWxVdEYwcUwvZ2o2YjUwRWRacnZ2Smttam5Cd2ZCTHU0WnFKWkpJa21PSC9qR0JrNkg3V2lTQXpsWldISitTb2RNQjdZZThZYUFvci9RSTFoSDEyRE5abktVajhMWDNTMjZFY3ZueEhQR0hTYy9WMkdvMHRzYjFyYk9SMHRRTkJSQkZ4V21FSzMyRDF1QWw5NUhsNUVWNzV0Vm9uL0pOVi9hSUMrUlBGNVM4YVZJMmNJWWZQSWRLYVJBUDQxL0gzWUdMYTBJV2pOR0ovU3p4RGl5SjAvalQyS0hVRk0zVE9BTk04OGJRTnBraEg4cC9sRzdseG40RVRxVXRJZUlhbEVxQ0pjZVpqNTZxVjlNS1RJRjQrUHlld09ZS0QxRXBDcGVhWTVZbzlBT1dmVjI5ZCtydXhjSmg3YWRKeUJKMjFkRnRtbUJhSEFJNGFJUHQrRmhuYmtvbVpCSVIwRWZreFB0T2dWNE5BRlQ2OWpTMGY2b3RadDd0dnIzS0x6ekNGM3kzZVpUYzNoOHZxTmdOMndORHU5SnlvclJiZmp5N041SWw0azZGUXVxTnB2YlRvZTJrNkJhekoxVWptRVB6elFSZFlnRU9od0FHWXQ2NVlVbmU5SlJHVUxNU2xnU1EvQWVKS0F5bTNYYkF6cHBJckdXeUdjN1hHbHI2QWJZNGxqOVQyZ0c5dW1yVnpWczhHMVFhR0lRVCt1UVArbHlubGQzcjIyL25jT3FWVmdxNEd4c0dFNTZ4K09rNDQ5RGtKeGZwK2FWeERlK0lpREZ2SG9JK1dTSGI0QTV0anZVaENZQUYwdXFSRWNPYmtLNzJzOE5CTUZ4Yi9hQXlVWE1PN3hsMzFoWG1GVTBWYjNvYTAra2xWQ3QzLzJRZ2x2aURUTXJwYXBBTk1WeUdiZUx4SEliS3V1RHFsd0hNT2NlWGx3RU90UVd4VE4rUHRnRTVHMW9QamJsOGF6aVdoT3I4SnlGQWdKK2RLR0EyVlRtU3dyODFhK0VnclJnNmdIcGVrUnlwa0FKR0RQSEVINElGSHpLOFFzclhGWm1DcjJJU0JyUmZGam9ibUk4WlJaODErbGpaalJXamRyRjh6eDllS1E1WFdEQmJYMEo5NUppVUp4YTlTeVBxT09pUThib0N4Rm10c2JTT1NydmFRT3JlQUJIOWdyYUxHZlBjakFtZDNjVm0wWXhmYU5VeUh4UDNLOHdUZkJyV1pERGREazN6R2lxbDdrV1l2MGpJT3BwaHMyd0kwb3BQOUpaRzF0Q25ZV0ZWVkljUFdQdkk1T0FVek1vbSsvZmpCSXI4L24zMWVkZmhWa3hvL0R5eG5CSGJxOUtPN2pxbFZVaXFHQTZGL2xOaml3V3RhamJlQ2V6UG0xbEUyWEZLNG5tYk1oRUp0U3Z2Uy9KQmpNVWE1eWw5YWk3aDRLd0IvRlI0dU9VZGRDMFVmUVU5MXNMYndCdElHVGJsYmxBaC9OViIsImV4cCI6MTU5MTYwMzI1MSwic2hhcmRfaWQiOjIzNTgwMTE2NywicGQiOjB9.IgoKXj8QzJG06fB7fFX9ybtZGOVCNeviPbE3NcFIJHk", "h-captcha-response"=>"P0_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNza2V5IjoiZkhJaXVleWRjcXo5clhWRm83eXJqa3FUdmZ5d05WaU1lRlVqdk1DcTNteG5yNEVmdVdlYzVCaS9jR0ppOU1oV1dpWHdmOUtaOGV6ZDZZQnhad3h3RTA1ajQ4dHlBdllma3J1cUJLVjdhWHlMeUgxS3kyWWpWTmUwc2RmSkd2OWo1cjR3TjJkS01TYkJZZHgwOW5wb2lTSnloT2VhL08xRTE4c1EySVF6L2ZJdlFWWVRtbVN1S1FkaXQwZGZYZndCY2FKeElIMWhSY01hS0d2dk9uNmNuSUFkak02dnl4L1lVWmE2c0F6STU2UUc3dWVBOWhVeDVBR3BPZkoydlhreW81WU9relhzbkNoMDFOVWNHSnp6RkZ6ckxxZWFFQTFCVGxVRkk5UTdEWXdUV2N6YU5oenRnZjVkdEFPSk95UmxlcjUrNDVING03bEY0eUlxU0FYZDdvdzJaRGNwZFNkS3BncWN1TDJsb0dtejJCRFRPOWFlZzdSbno1V1hhNU0rK1phQ2VlTG9XYUpCekhRS1BsRUFlZUxoZVpUYkZNaUJKWkVIak9FT3RvWW5wU0xqTWFQWmtvN3QrUEhRRTlzR1lWcVMrek1kN0EzTHIxam1tb1JRVXI1SVpXeldBQ3E5QllxdXNCUFVsQkJja2JtK3NzL3JUbmxCanUwN1FxbGk1LzkvK3BrbktHL2h1OHFzanpZdjJ4RThCQWFZNnIwcG5sRHNHd1VQYkgwbzRkUGVqNHRlem1QZXZobmY1NGxyQUJ4M2Q2OC9jeHJnbEF0QWo0TjFFVUZDVXMvY1VnRmRpa0hPZVBGcmtsQ3VvR3Yvekd3cWx5UjB3ZVNjNWV3REJ0R29ucTZxMm1EYWp0djBicDZTUENiQkZwakNlMWdpVmlFaXVhME1DSC9DVjZiVUF6WitXNmplUWUrVlBMUXJuYW1MVTIxaklhSkFpL2hBM1hQaC9sUGp0ekQrY1VCVDRWUmNrYnc1ZjE2SytwZjFDOGhDckorSjBJV1I0TmRXVVVTekRsNlRsVXpzQmZuUzJrSHVNTzJBQ1BjU05YazhMOUJHQUF4MXc0R2VzTVRxVGNXWGNDM2NCZVQrdGdLVUFUNmRDV3NIb0txeldSR1lXL2VhSTBCTVNBMEZSYlZFR2NrQTdYUGd2NHVac1Y3K3FlVlF4QXNITUJYWkJjd0pMb3UxTEluSnExZlh6S1NZRjlIbWxSUDBZT0JPc3pGUVRaL2pBM2FuT1orREdXc1pIcER0blg2MmZGOUovSW9oQ2xDZDEweWxVdEYwcUwvZ2o2YjUwRWRacnZ2Smttam5Cd2ZCTHU0WnFKWkpJa21PSC9qR0JrNkg3V2lTQXpsWldISitTb2RNQjdZZThZYUFvci9RSTFoSDEyRE5abktVajhMWDNTMjZFY3ZueEhQR0hTYy9WMkdvMHRzYjFyYk9SMHRRTkJSQkZ4V21FSzMyRDF1QWw5NUhsNUVWNzV0Vm9uL0pOVi9hSUMrUlBGNVM4YVZJMmNJWWZQSWRLYVJBUDQxL0gzWUdMYTBJV2pOR0ovU3p4RGl5SjAvalQyS0hVRk0zVE9BTk04OGJRTnBraEg4cC9sRzdseG40RVRxVXRJZUlhbEVxQ0pjZVpqNTZxVjlNS1RJRjQrUHlld09ZS0QxRXBDcGVhWTVZbzlBT1dmVjI5ZCtydXhjSmg3YWRKeUJKMjFkRnRtbUJhSEFJNGFJUHQrRmhuYmtvbVpCSVIwRWZreFB0T2dWNE5BRlQ2OWpTMGY2b3RadDd0dnIzS0x6ekNGM3kzZVpUYzNoOHZxTmdOMndORHU5SnlvclJiZmp5N041SWw0azZGUXVxTnB2YlRvZTJrNkJhekoxVWptRVB6elFSZFlnRU9od0FHWXQ2NVlVbmU5SlJHVUxNU2xnU1EvQWVKS0F5bTNYYkF6cHBJckdXeUdjN1hHbHI2QWJZNGxqOVQyZ0c5dW1yVnpWczhHMVFhR0lRVCt1UVArbHlubGQzcjIyL25jT3FWVmdxNEd4c0dFNTZ4K09rNDQ5RGtKeGZwK2FWeERlK0lpREZ2SG9JK1dTSGI0QTV0anZVaENZQUYwdXFSRWNPYmtLNzJzOE5CTUZ4Yi9hQXlVWE1PN3hsMzFoWG1GVTBWYjNvYTAra2xWQ3QzLzJRZ2x2aURUTXJwYXBBTk1WeUdiZUx4SEliS3V1RHFsd0hNT2NlWGx3RU90UVd4VE4rUHRnRTVHMW9QamJsOGF6aVdoT3I4SnlGQWdKK2RLR0EyVlRtU3dyODFhK0VnclJnNmdIcGVrUnlwa0FKR0RQSEVINElGSHpLOFFzclhGWm1DcjJJU0JyUmZGam9ibUk4WlJaODErbGpaalJXamRyRjh6eDllS1E1WFdEQmJYMEo5NUppVUp4YTlTeVBxT09pUThib0N4Rm10c2JTT1NydmFRT3JlQUJIOWdyYUxHZlBjakFtZDNjVm0wWXhmYU5VeUh4UDNLOHdUZkJyV1pERGREazN6R2lxbDdrV1l2MGpJT3BwaHMyd0kwb3BQOUpaRzF0Q25ZV0ZWVkljUFdQdkk1T0FVek1vbSsvZmpCSXI4L24zMWVkZmhWa3hvL0R5eG5CSGJxOUtPN2pxbFZVaXFHQTZGL2xOaml3V3RhamJlQ2V6UG0xbEUyWEZLNG5tYk1oRUp0U3Z2Uy9KQmpNVWE1eWw5YWk3aDRLd0IvRlI0dU9VZGRDMFVmUVU5MXNMYndCdElHVGJsYmxBaC9OViIsImV4cCI6MTU5MTYwMzI1MSwic2hhcmRfaWQiOjIzNTgwMTE2NywicGQiOjB9.IgoKXj8QzJG06fB7fFX9ybtZGOVCNeviPbE3NcFIJHk", "commit"=>"Do something magic!"}
+Redirected to http://da712fa5d147.ngrok.io/
+Completed 302 Found in 153ms (Allocations: 1372)
+
+
+Started GET "/" for 92.184.108.197 at 2020-06-08 09:58:53 +0200
+Cannot render console from 92.184.108.197! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.7ms | Allocations: 2156)
+
+
+Started GET "/invisible_hcaptcha" for 92.184.108.197 at 2020-06-08 09:58:57 +0200
+Cannot render console from 92.184.108.197! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HcaptchaController#invisible_hcaptcha as HTML
+  Rendering hcaptcha/invisible_hcaptcha.html.erb within layouts/application
+  Rendered hcaptcha/invisible_hcaptcha.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1118)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.8ms | Allocations: 3144)
+
+
+Started POST "/verify_demo" for 92.184.108.197 at 2020-06-08 09:59:15 +0200
+Cannot render console from 92.184.108.197! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HcaptchaController#verify_demo as HTML
+  Parameters: {"authenticity_token"=>"KcfXXQIUTzIkIH+jdnaiQf6FcOk656VgsHJlKCLx1JJpUVds0WWq7TRPR1Ur0lkXsqkh0ZX15OMiqY2DBXpaPA==", "q"=>"ISmael", "g-recaptcha-response"=>"P0_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNza2V5IjoiM0gySjFybm1sR09KNWhPMlZTTEx4NTZ3U0dFVjBvM2RPbnJHVHRQYUloRERETnY2em0wQ2s1Q3F3NG5pYWJSSG1FeFd5TUZpSXZXTVBkU1JQVnlDOExtUTBKNjNCbldDK1IzVDFWVXpQaVM0UlFmS05Pa0lZVzFDYTdLRHZJZ0xmOVEwdElWc1hHcjhBZSt1LzdiMkpQelJqQVNIa1ltYnpjem0wWjVXc3lVNWZIWTVxTFNqSklNdEE4aFBwbWdaTHc3R1VFMXg1K25kR2kyaHVhWWJWRkRBaUZ2OWdSK2NYMmpoTUJ0V0F6QWxPN0JIcWtSRlVlUHNaMlY0N2dQWEpSdmxHeXdhQXNyM1Q0VGJrWng0RXJnZDRIemNxTTJOUjNCcnVKOE9rSEwwbHptN2Q1WjlaTjNHQlNHb1MyRlE2SGpOaElJMVlkUUdDYmtQZ2tFNlZlblk1R3p6dWJ6bitzckpTMERHaHlLdWVhTW05ZkkwelgvUkxMYU1WcWFvU29rYzBZQmVTUGR4NWUxamJmaWRvTEpVck9KTzVtcVI3c0NOMUZIRVB1NE40US9iNTNxQ3B4eVJqa1RDWTZkMTNmb1RzVG41aVhkRDBXcENvRUU0cTE5eEFCSUN5MHE5S0d4V1lrY1UvRHBiNUx5ZlRZRW83YnNXK0lRa3ZROHQweWU5UTUrdWcrTXZDMkJ3aElzR0ZOcWtFM0diWHZBbDMrN2N3Y2lIOUZkVFZRdDlFTXM1SUJ2UmUxQjNkbGduQWVCdzJ0aHprd0R1dWtoVjRIOEhrU1dTZjJ2K3lPQWZ5WmJ3NmYvMlBsUWlUbXgzamVaVkMzWFVGaXBiRzZWWUVCTG9FUmRVbGVWT3FmZWQ4VU96NERVRVZkdS91SGt6S3JKekJ0dUlmL1plNWVpeTdIZ1pYS2g4RXk5a3kxcWdhZW9IZjlRUURnTWlzOHR5WFIxTjlaZmR1S1Q2OHl4aXhyYVgyNlVSa2ZBZC81NTg1Z25jSng2NGkzV3NZZUpKbmhsTWREd0JieXNHWEhRQThvYUtoRWRxNkRROHgvbWd2ZVpDbWZybTNYckhKdG15Sk1Tem9zVmZGUngrQzhRL1BsR1dIT0dQVEFXSUFpcGdMY0dpdXcrWGNtRjJxam9ONGwrcUpwbWR5bnhJVzc3MFpwNEN5TFkwTW04QkltT0xkTjVveGNOcSt1emY5b1VmMkZWVXU3MzE1Yk55K21TNFBuS1ZBSVJsaG5RYnFaa3ZvczZteXdRQS9keEF4a2FSeFVmaWNjU2d6Wms2cUtBanYzSVFLUWFuMzd5WWhSSGVRQ0N5cWgyaWlTSU9nMGR2Vmo0L2ZRNmJ6RHlwZklnOXhrd1l1aHJMY2RqUUxsTmFHQWhMUUoxK2JwUDh0cWE1VmtEbVJRSGdvVk5rbk9CZnJEUGUzY1dZTHQxSjFsMjJIbEI5UGJHMzdsaHVpMFBRRDc3dXVBSjJNd2EwOHI2UlRKMWVIZ3hJTUs5SVl3aURrSXgzcjNaUG1hZUFESDZSWjBpNjhReGl1YmFDTEVybE90Y2ZLNXdRcGx1em9GWmdudE82dkJrZ1Y1bHErSEs3Z0xrSElmY1RFSGpmMTc1ZHlJV1ZWcnJ0aTkxU2pyZ0ZLbnB6cDJHWDAyMHNrQTByTFVCajMrb0JrVzRwVWwxL0syZTRjRjlFenFrUGIvR0dPVVd4ZFMvSHdBUGQ4K0x1dHJOR2hOdFcxUTlwMitvdDc3bzdZalZkVjk5UytmYkRaTHp2S0hNNjBHR2lNQ0MxVGdDd2ZkQy9BTVFjSzZPS0x3RjdwS0pZYlFiQk9wQW9tbUZnV2Vtc0ZlVWNwUFcxaXBBZGJETTgvQzNtZGY3MnhqOERucDlWVzZpUndNK0wyak13REVIWmJYSnU2VGFhbXJNSmJUS0YyR0tvdktsV3ZGMFBBdGdPUjRlWjk4a21TWmMxRXJabVlJK3NmTDRDeXA5eGh0MGUzaEovVktST0tvV1JoTEh3bDMyYThtTEJTTy9ENFFsTUFERDhOMXlLb0YyWDJEc1BlU3EzRXdlWDJqVi9BK0R3b2Uwd1I0QjZuRHorU3JiSS85SitTZWs2TDBUcUcySjRjRTB6WURET0wzN1MxS2JRcGsvSVJMMVB2dkJOL2dhK1pJRDUzek9WVWduZnNXM0pBaFZtSU1wM0QvRjlzWkJ0R25wb3dRTnhLUGpsZmx2dmppVncvOUx3S0hmRmpYNmtKa0FQUG9wcTdpWDVoUkdHWFNlWjhjbDQ1bzRCN1FubnJNTTEyUWlVTUUzU0dFemcrS09aWGNtcjMrQTBIUEkvRmxqejlKd2xVbmtjKzlCeXFwRzZ3cHYyVmVjNFY3MU5uRnpGNkY1aWhUQi9xUlBIcFNxRXh3K240cnJYUkNEYkNxTnlxbFByUmJmTnJXTzlzVUVFUVBsRzBEdEJVUng1eTNmSkVNK1hYVVZIbUVNNEpkdDFKNXc4cEdGTDFRSGh3VFdGcEZ3cGJaNWl3a1g2MndDKzZiNEVnV1lPVzlDdW9ha1JWRWZaQlZWOEZTVUVFeEU3TUdGclI5M0RrWDVQbElNcnNwUC95ZUFVYit3Q0hUR2JrWFk0SDVvUWdub2hoTHVIb256M2ZBc0RSdEVpM0FTQjBQZmxzbFZyWW5xY2E4QlY1c25RQlZQUk5KM1VUOXgvd2ZISkxVdjlTSHdFREF4aHFQa21YdHJ6VEoxSXNJaTlsa3l3IiwiZXhwIjoxNTkxNjAzMjc1LCJzaGFyZF9pZCI6MjM1ODAxMTY3LCJwZCI6MH0.eak83K14Hpu48qYj8_rSGuSeiIFAxSkva52OHA8Bf04", "h-captcha-response"=>"P0_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXNza2V5IjoiM0gySjFybm1sR09KNWhPMlZTTEx4NTZ3U0dFVjBvM2RPbnJHVHRQYUloRERETnY2em0wQ2s1Q3F3NG5pYWJSSG1FeFd5TUZpSXZXTVBkU1JQVnlDOExtUTBKNjNCbldDK1IzVDFWVXpQaVM0UlFmS05Pa0lZVzFDYTdLRHZJZ0xmOVEwdElWc1hHcjhBZSt1LzdiMkpQelJqQVNIa1ltYnpjem0wWjVXc3lVNWZIWTVxTFNqSklNdEE4aFBwbWdaTHc3R1VFMXg1K25kR2kyaHVhWWJWRkRBaUZ2OWdSK2NYMmpoTUJ0V0F6QWxPN0JIcWtSRlVlUHNaMlY0N2dQWEpSdmxHeXdhQXNyM1Q0VGJrWng0RXJnZDRIemNxTTJOUjNCcnVKOE9rSEwwbHptN2Q1WjlaTjNHQlNHb1MyRlE2SGpOaElJMVlkUUdDYmtQZ2tFNlZlblk1R3p6dWJ6bitzckpTMERHaHlLdWVhTW05ZkkwelgvUkxMYU1WcWFvU29rYzBZQmVTUGR4NWUxamJmaWRvTEpVck9KTzVtcVI3c0NOMUZIRVB1NE40US9iNTNxQ3B4eVJqa1RDWTZkMTNmb1RzVG41aVhkRDBXcENvRUU0cTE5eEFCSUN5MHE5S0d4V1lrY1UvRHBiNUx5ZlRZRW83YnNXK0lRa3ZROHQweWU5UTUrdWcrTXZDMkJ3aElzR0ZOcWtFM0diWHZBbDMrN2N3Y2lIOUZkVFZRdDlFTXM1SUJ2UmUxQjNkbGduQWVCdzJ0aHprd0R1dWtoVjRIOEhrU1dTZjJ2K3lPQWZ5WmJ3NmYvMlBsUWlUbXgzamVaVkMzWFVGaXBiRzZWWUVCTG9FUmRVbGVWT3FmZWQ4VU96NERVRVZkdS91SGt6S3JKekJ0dUlmL1plNWVpeTdIZ1pYS2g4RXk5a3kxcWdhZW9IZjlRUURnTWlzOHR5WFIxTjlaZmR1S1Q2OHl4aXhyYVgyNlVSa2ZBZC81NTg1Z25jSng2NGkzV3NZZUpKbmhsTWREd0JieXNHWEhRQThvYUtoRWRxNkRROHgvbWd2ZVpDbWZybTNYckhKdG15Sk1Tem9zVmZGUngrQzhRL1BsR1dIT0dQVEFXSUFpcGdMY0dpdXcrWGNtRjJxam9ONGwrcUpwbWR5bnhJVzc3MFpwNEN5TFkwTW04QkltT0xkTjVveGNOcSt1emY5b1VmMkZWVXU3MzE1Yk55K21TNFBuS1ZBSVJsaG5RYnFaa3ZvczZteXdRQS9keEF4a2FSeFVmaWNjU2d6Wms2cUtBanYzSVFLUWFuMzd5WWhSSGVRQ0N5cWgyaWlTSU9nMGR2Vmo0L2ZRNmJ6RHlwZklnOXhrd1l1aHJMY2RqUUxsTmFHQWhMUUoxK2JwUDh0cWE1VmtEbVJRSGdvVk5rbk9CZnJEUGUzY1dZTHQxSjFsMjJIbEI5UGJHMzdsaHVpMFBRRDc3dXVBSjJNd2EwOHI2UlRKMWVIZ3hJTUs5SVl3aURrSXgzcjNaUG1hZUFESDZSWjBpNjhReGl1YmFDTEVybE90Y2ZLNXdRcGx1em9GWmdudE82dkJrZ1Y1bHErSEs3Z0xrSElmY1RFSGpmMTc1ZHlJV1ZWcnJ0aTkxU2pyZ0ZLbnB6cDJHWDAyMHNrQTByTFVCajMrb0JrVzRwVWwxL0syZTRjRjlFenFrUGIvR0dPVVd4ZFMvSHdBUGQ4K0x1dHJOR2hOdFcxUTlwMitvdDc3bzdZalZkVjk5UytmYkRaTHp2S0hNNjBHR2lNQ0MxVGdDd2ZkQy9BTVFjSzZPS0x3RjdwS0pZYlFiQk9wQW9tbUZnV2Vtc0ZlVWNwUFcxaXBBZGJETTgvQzNtZGY3MnhqOERucDlWVzZpUndNK0wyak13REVIWmJYSnU2VGFhbXJNSmJUS0YyR0tvdktsV3ZGMFBBdGdPUjRlWjk4a21TWmMxRXJabVlJK3NmTDRDeXA5eGh0MGUzaEovVktST0tvV1JoTEh3bDMyYThtTEJTTy9ENFFsTUFERDhOMXlLb0YyWDJEc1BlU3EzRXdlWDJqVi9BK0R3b2Uwd1I0QjZuRHorU3JiSS85SitTZWs2TDBUcUcySjRjRTB6WURET0wzN1MxS2JRcGsvSVJMMVB2dkJOL2dhK1pJRDUzek9WVWduZnNXM0pBaFZtSU1wM0QvRjlzWkJ0R25wb3dRTnhLUGpsZmx2dmppVncvOUx3S0hmRmpYNmtKa0FQUG9wcTdpWDVoUkdHWFNlWjhjbDQ1bzRCN1FubnJNTTEyUWlVTUUzU0dFemcrS09aWGNtcjMrQTBIUEkvRmxqejlKd2xVbmtjKzlCeXFwRzZ3cHYyVmVjNFY3MU5uRnpGNkY1aWhUQi9xUlBIcFNxRXh3K240cnJYUkNEYkNxTnlxbFByUmJmTnJXTzlzVUVFUVBsRzBEdEJVUng1eTNmSkVNK1hYVVZIbUVNNEpkdDFKNXc4cEdGTDFRSGh3VFdGcEZ3cGJaNWl3a1g2MndDKzZiNEVnV1lPVzlDdW9ha1JWRWZaQlZWOEZTVUVFeEU3TUdGclI5M0RrWDVQbElNcnNwUC95ZUFVYit3Q0hUR2JrWFk0SDVvUWdub2hoTHVIb256M2ZBc0RSdEVpM0FTQjBQZmxzbFZyWW5xY2E4QlY1c25RQlZQUk5KM1VUOXgvd2ZISkxVdjlTSHdFREF4aHFQa21YdHJ6VEoxSXNJaTlsa3l3IiwiZXhwIjoxNTkxNjAzMjc1LCJzaGFyZF9pZCI6MjM1ODAxMTY3LCJwZCI6MH0.eak83K14Hpu48qYj8_rSGuSeiIFAxSkva52OHA8Bf04"}
+Redirected to http://da712fa5d147.ngrok.io/
+Completed 302 Found in 157ms (Allocations: 1289)
+
+
+Started GET "/" for 92.184.108.197 at 2020-06-08 09:59:16 +0200
+Cannot render console from 92.184.108.197! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.8ms | Allocations: 2156)
+
+
+Started GET "/" for ::1 at 2020-06-09 11:07:42 +0200
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 508)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.4ms | Allocations: 4785)
+
+
+Started GET "/hcaptcha" for ::1 at 2020-06-09 11:07:47 +0200
+Processing by HcaptchaController#hcaptcha as HTML
+  Rendering hcaptcha/hcaptcha.html.erb within layouts/application
+  Rendered hcaptcha/hcaptcha.html.erb within layouts/application (Duration: 1.5ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | Allocations: 3061)
+
+
+Started GET "/hcaptcha" for ::1 at 2020-06-09 11:08:48 +0200
+Processing by HcaptchaController#hcaptcha as HTML
+  Rendering hcaptcha/hcaptcha.html.erb within layouts/application
+  Rendered hcaptcha/hcaptcha.html.erb within layouts/application (Duration: 2733.7ms | Allocations: 47477)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2742ms (Views: 2741.3ms | Allocations: 51328)
+
+

@@ -35,6 +35,6 @@ module RailsDemo
     config.action_view.automatically_disable_submit_tag = false
 
     config.hosts << 'lvh.me'
-    config.hosts << "6b471af585ec.ngrok.io"
+    config.hosts << "da712fa5d147.ngrok.io"
   end
 end
