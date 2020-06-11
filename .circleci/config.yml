@@ -22,13 +22,13 @@ jobs:
           command: |
             gem install rubocop
             mkdir -p rubocop
-            rubocop --format html -o rubocop/rubocop.html || true
+            rubocop --format html -o rubocop/rubocop.html
       - run:
           name: Notation
           command: |
             gem install sexp_processor -v 4.13.0
             gem install rubycritic -v 4.3.2
-            rubycritic app lib/utils --no-browser # -> Mettre les repertoires ou il y a votre code
+            rubycritic app --no-browser
       - run:
           name: "Axe d'optimisation"
           command: |
