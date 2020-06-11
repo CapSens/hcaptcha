@@ -6,12 +6,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    coderay (1.1.3)
     diff-lcs (1.3)
-    method_source (1.0.0)
-    pry (0.13.1)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
     rake (12.3.3)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
@@ -32,7 +27,6 @@ PLATFORMS
 
 DEPENDENCIES
   hcaptcha!
-  pry
   rake (~> 12.0)
   rspec (~> 3.0)
 

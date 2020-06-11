@@ -1,9 +1,7 @@
 class HcaptchaController < ApplicationController
-  def hcaptcha
-  end
+  def hcaptcha; end
 
-  def invisible_hcaptcha
-  end
+  def invisible_hcaptcha; end
 
   def verify_demo
     captcha_response = verify_hcaptcha

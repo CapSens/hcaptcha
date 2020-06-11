@@ -61,9 +61,7 @@ module Hcaptcha
           theme: options[:theme] || 'normal'
         }
 
-        if options[:size] == 'invisible'
-          data.merge!(callback: options[:callback] || 'captchaValidated')
-        end
+        data.merge!(callback: options[:callback] || 'captchaValidated') if options[:size] == 'invisible'
 
         data
       end

@@ -23,9 +23,9 @@ module Hcaptcha
       response = Net::HTTP.post_form(configuration.verify_url, **build_payload(token))
       response_json = JSON.parse(response.body)
       success = response_json['success']
-      return success, response_json
+      [success, response_json]
     rescue StandardError => e
-      raise Hcaptcha::Error.new(e)
+      raise(Hcaptcha::Error.new(e))
     end
 
     def build_payload(token)

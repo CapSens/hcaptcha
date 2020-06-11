@@ -22,7 +22,7 @@ RSpec.describe Hcaptcha::Helpers::FormHelper do
       end
 
       it 'includes basic hcaptcha script' do
-        expect(subject).to match(/<script src=\"https:\/\/hcaptcha.com\/1\/api.js" async defer><\/script>/m)
+        expect(subject).to match(/<script src="https:\/\/hcaptcha.com\/1\/api.js" async defer><\/script>/m)
       end
     end
 
