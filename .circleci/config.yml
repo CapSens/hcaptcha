@@ -1,0 +1,59 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/hcaptcha
+    docker:
+      - image: capsens/ruby-node-yarn:2.6.5 # -> Mettre la version de ruby que vous avez
+    steps:
+      - checkout
+      - run:
+          name: Bundle install
+          command: |
+            gem install bundler -v "~>2.0"
+            bundle install --path vendor/bundle
+      - run:
+          name: Test
+          command: bundle exec rspec
+      - run:
+          name: Coding style
+          command: |
+            gem install rubocop
+            mkdir -p rubocop
+            rubocop --format html -o rubocop/rubocop.html || true
+      - run:
+          name: Notation
+          command: |
+            gem install sexp_processor -v 4.13.0
+            gem install rubycritic -v 4.3.2
+            rubycritic app lib/utils --no-browser # -> Mettre les repertoires ou il y a votre code
+      - run:
+          name: "Complexité cyclomatique"
+          command: |
+            gem install fukuzatsu
+            fuku check app lib -f html # -> Mettre les repertoires ou il y a votre code
+      - run:
+          name: "Axe d'optimisation"
+          command: |
+            gem install fasterer
+            fasterer || true
+      - run:
+          name: "Audit Securité du Gemfile"
+          command: |
+            gem install bundler-audit
+            bundle audit --update
+      - run:
+          name: "Audit de securité de l'application"
+          command: |
+            gem install brakeman
+            mkdir -p security
+            brakeman -o security/brakeman.html || true
+      - store_artifacts:
+          path: security/brakeman.html
+      - store_artifacts:
+          path: rubocop/rubocop.html
+      - store_artifacts:
+          path: tmp/rubycritic
+      - store_artifacts:
+          path: doc/fukuzatsu/htm
+      - store_artifacts:
+          path: coverage
