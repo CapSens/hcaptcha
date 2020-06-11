@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@0.1.2 
+  ruby: circleci/ruby@0.1.2
 
 jobs:
   build:
@@ -29,11 +29,6 @@ jobs:
             gem install sexp_processor -v 4.13.0
             gem install rubycritic -v 4.3.2
             rubycritic app lib/utils --no-browser # -> Mettre les repertoires ou il y a votre code
-      - run:
-          name: "Complexité cyclomatique"
-          command: |
-            gem install fukuzatsu
-            fuku check app lib -f html # -> Mettre les repertoires ou il y a votre code
       - run:
           name: "Axe d'optimisation"
           command: |
