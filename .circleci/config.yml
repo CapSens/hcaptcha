@@ -39,19 +39,7 @@ jobs:
           command: |
             gem install bundler-audit
             bundle audit --update
-      - run:
-          name: "Audit de securité de l'application"
-          command: |
-            gem install brakeman
-            mkdir -p security
-            brakeman -o security/brakeman.html || true
-      - store_artifacts:
-          path: security/brakeman.html
       - store_artifacts:
           path: rubocop/rubocop.html
       - store_artifacts:
           path: tmp/rubycritic
-      - store_artifacts:
-          path: doc/fukuzatsu/htm
-      - store_artifacts:
-          path: coverage
