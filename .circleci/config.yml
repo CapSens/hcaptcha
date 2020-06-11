@@ -1,9 +1,12 @@
-version: 2
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
 jobs:
   build:
-    working_directory: ~/hcaptcha
     docker:
-      - image: capsens/ruby-node-yarn:2.6.5 # -> Mettre la version de ruby que vous avez
+      - image: circleci/ruby:2.6.3-stretch-node
+    executor: ruby/default
     steps:
       - checkout
       - run:
