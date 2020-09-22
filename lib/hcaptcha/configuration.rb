@@ -1,6 +1,7 @@
 module Hcaptcha
   class Configuration
-    attr_accessor :site_key, :secret_key, :verify_url
+    attr_accessor :site_key, :secret_key
+    attr_reader :verify_url
 
     def initialize
       @site_key = nil
