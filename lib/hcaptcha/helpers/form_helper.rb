@@ -27,7 +27,7 @@ module Hcaptcha
 
       def hcaptcha_script
         <<~HTML
-          <script src="https://hcaptcha.com/1/api.js" async defer></script>
+          <script src="#{Hcaptcha.configuration.api_script_url}" async defer></script>
         HTML
       end
 
