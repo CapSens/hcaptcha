@@ -1,6 +1,6 @@
 # Hcaptcha
 
-Rails gem made to use Hcaptcha bot protection in your Rails applications.
+Ruby gem made to use Hcaptcha bot protection in your applications.
 Official documentation is available [here](https://docs.hcaptcha.com/)
 
 ## Installation
@@ -29,10 +29,12 @@ And then add an initializer
 # config/initializers/hcaptcha.rb
 
 Hcaptcha.configure do |config|
-  config.site_key = [YOUR PUBLIC SITE KEY]
-  config.secret_key = [YOUR SECRET KEY]
+  config.site_key = 'YOUR_PUBLIC_SITE_KEY'
+  config.secret_key = 'YOUR_SECRET_KEY'
   # optional, default value = https://hcaptcha.com/siteverify
-  config.verify_url = [VERIFY URL]
+  config.verify_url = 'VERIFY_URL'
+  # optional, default value = https://hcaptcha.com/1/api.js
+  config.api_script_url = 'API_SCRIPT_URL'
 end
 ```
 
@@ -68,6 +70,19 @@ exemple:
 ...
 ```
 
+This GEM has been made to be used inside Rails applications but can also be used in standard ruby applications.
+You can call `Hcaptcha.api_verification(token)` to get a verfication from hcaptcha API.
+The verification token can be obtained by following hcaptcha documentation in your html views or by using this gem
+form helper after requiring and including mandatory files and modules like so:
+
+```ruby
+require 'hcaptcha/helpers/form_helper'
+
+include Hcaptcha::Helpers::FormHelper
+
+hcaptcha_tag(**options) # will return an html string with required input and script
+```
+
 ## Invisible Hcaptcha
 
 To use invisible Hcaptcha, simply add option `size: invisible` to `hcaptcha_tag` method call.
@@ -84,7 +99,7 @@ You can disable it either globally in your app like so
 config.action_view.automatically_disable_submit_tag = false
 ```
 
-or, to do it ad-hoc for specific buttons, add this to the submit button
+or, to do it ad-hoc for specific buttons, add this option to the submit button
 
 ```ruby
 data: { disable_with: false }

@@ -8,6 +8,7 @@ RSpec.describe Hcaptcha::Helpers::FormHelper do
 
     before do
       allow(Hcaptcha).to receive_message_chain(:configuration, :site_key) { 'default' }
+      allow(Hcaptcha).to receive_message_chain(:configuration, :api_script_url) { 'https://hcaptcha.com/1/api.js' }
     end
 
     context 'without option' do
